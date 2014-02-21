@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="header">
+            <h1>Controls</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <form>
+                <div data-theme="a">
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" value="" placeholder="Username" />
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="slider-1">Input slider:</label>
+                        <input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <legend>Agree to the terms:</legend>
+                            <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+                            <label for="checkbox-2a">I agree</label>
+                            <input type="checkbox" name="checkbox-2b" id="checkbox-2b" class="custom" />
+                            <label for="checkbox-2b">I do not agree</label>
+                        </fieldset>
+                    </div>
+                    <fieldset data-role="controlgroup">
+                        <legend>Choose a pet:</legend>
+                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+                        <label for="radio-choice-1">Cat</label>
+
+                        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+                        <label for="radio-choice-2">Dog</label>
+
+                        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+                        <label for="radio-choice-3">Hamster</label>
+
+                        <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+                        <label for="radio-choice-4">Lizard</label>
+                    </fieldset>
+                </div>
+            </form>
+        </div><!-- /content -->
+    </div>
+</body>
+</html>
