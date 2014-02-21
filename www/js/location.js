@@ -1,14 +1,15 @@
 ﻿function initialize() {
-    app.receivedEvent('showing location');
+    
     var options = { maximumAge: 0, timeout: 10000, enableHighAccuracy: true };
     navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
     return false;
 };
 
 function onSuccess(position) {
+    
     var myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: myLocation,
         zoom: 15
