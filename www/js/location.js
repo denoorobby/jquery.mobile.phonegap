@@ -1,14 +1,12 @@
 ﻿function initialize() {
     
     var options = { maximumAge: 0, timeout: 10000, enableHighAccuracy: true };
-
     navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
     return false;
 };
 
 function onSuccess(position) {
-    app.receivedEvent('success!');
     var myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
     map = new google.maps.Map(document.getElementById('map-canvas'), {

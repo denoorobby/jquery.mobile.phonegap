@@ -4,21 +4,25 @@
     <title></title>
 </head>
 <body>
-    <div data-role="page" data-theme="b">
+    <div data-role="page">
         <div data-role="header">
             <h1>Controls</h1>
         </div><!-- /header -->
 
         <div data-role="content">
             <form>
-                <div data-theme="a">
+                <div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="search-2">Search Input:</label>
+                        <input type="search" name="search-2" id="search-2" value="" />
+                    </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="username">Username:</label>
                         <input type="text" name="username" id="username" value="" placeholder="Username" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <label for="slider-1">Input slider:</label>
-                        <input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+                        <input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" data-highlight="true" />
                     </div>
                     <div data-role="fieldcontain" class="ui-hide-label">
                         <fieldset data-role="controlgroup">
@@ -29,21 +33,57 @@
                             <label for="checkbox-2b">I do not agree</label>
                         </fieldset>
                     </div>
-                    <fieldset data-role="controlgroup">
-                        <legend>Choose a pet:</legend>
-                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-                        <label for="radio-choice-1">Cat</label>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <legend>Choose a pet:</legend>
+                            <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+                            <label for="radio-choice-1">Cat</label>
 
-                        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
-                        <label for="radio-choice-2">Dog</label>
+                            <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+                            <label for="radio-choice-2">Dog</label>
 
-                        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
-                        <label for="radio-choice-3">Hamster</label>
+                            <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+                            <label for="radio-choice-3">Hamster</label>
 
-                        <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
-                        <label for="radio-choice-4">Lizard</label>
-                    </fieldset>
-                </div>
+                            <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+                            <label for="radio-choice-4">Lizard</label>
+                        </fieldset>
+                        </div>
+                    <div data-role="fieldcontain">
+                        <label for="flip-2">Flip switch:</label>
+                        <select name="flip-2" id="flip-2" data-role="slider">
+                            <option value="nope">Nope</option>
+                            <option value="yep">Yep</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>Date of Birth:</legend>
+
+                            <label for="select-choice-month">Month</label>
+                            <select name="select-choice-month" id="select-choice-month">
+                                <option>Month</option>
+                                <option value="jan">January</option>
+                                <!-- etc. -->
+                            </select>
+
+                            <label for="select-choice-day">Day</label>
+                            <select name="select-choice-day" id="select-choice-day">
+                                <option>Day</option>
+                                <option value="1">1</option>
+                                <!-- etc. -->
+                            </select>
+
+                            <label for="select-choice-year">Year</label>
+                            <select name="select-choice-year" id="select-choice-year">
+                                <option>Year</option>
+                                <option value="2011">2011</option>
+                                <!-- etc. -->
+                            </select>
+
+                        </fieldset>
+                    </div>
+                    </div>
             </form>
         </div><!-- /content -->
     </div>

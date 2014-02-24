@@ -24,9 +24,6 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link href="js/jquery.mobile-1.4.1/jquery.mobile-1.4.1.css" rel="stylesheet" type="text/css"/>
-        <link href="css/jquerymobile.nativedroid.css" rel="stylesheet" />
-        <link href="css/jquerymobile.nativedroid.light.css" rel="stylesheet" />
-        <link href="css/font-awesome.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href="css/default.css" rel="stylesheet" />
         <title>Jquery mobile test</title>
@@ -37,14 +34,21 @@
             <div class="wrapper">
                 <div data-role="header">
                     <h1>Phonegap jquery mobile test</h1>
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a data-icon="star" href="location.html">Location</a></li>
+                            <li><a data-icon="info" href="controls.html">Controls</a></li>
+                            
+                        </ul>
+                    </div><!-- /navbar -->
                 </div><!-- /header -->
-
                 <div data-role="content">
                     <ul data-role="listview">
                         <li><a href="location.html" data-transition="slide">Location</a></li>
-                        <li><a href="controls.html" data-transition="slide">Controls</a></li>
-                        <li><a href="#bar" data-transition="slide">BMW</a></li>
+                        <li><a href="controls.html" data-transition="slideup">Controls</a></li>
                     </ul>
+
+                    <a data-role="button" href="#dialogPage" data-rel="dialog" data-transition="pop">Open dialog</a>
                 </div><!-- /content -->
             </div>
             <div data-role="footer">
@@ -52,8 +56,17 @@
             </div><!-- /footer -->
         </div><!-- /page -->
 
+        <div data-role="page" id="dialogPage">
+            <div data-role="header">
+                <h2>Dialog</h2>
+            </div>
+            <div role="main" class="ui-content">
+                <p>I am a dialog</p>
+                <a data-role="button" data-rel="back">Go back</a>
+            </div>
+        </div>
+
         <script type="text/javascript" src="phonegap.js"></script>
-        
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.1/jquery.mobile-1.4.1.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
